@@ -1,0 +1,521 @@
+<html dir="ltr" xmlns="http://www.w3.org/1999/xhtml">
+
+<head runat="server">
+<meta name="WebPartPageExpansion" content="full" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta content="width=device-width, initial-scale=1" name="viewport" />
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"/>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/>
+
+
+<link href="https://fonts.googleapis.com/css?family=Abel:100,400" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Thasadith" rel="stylesheet">
+<link href="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/3.9.0/fullcalendar.min.css" rel="stylesheet">
+<link href="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/3.9.0/fullcalendar.print.css" rel="stylesheet">
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.22.2/moment.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/3.9.0/fullcalendar.min.js"></script>
+
+
+
+<title>Calendar</title>
+</head>
+
+
+<style type="text/css">
+
+body{
+	background:gainsboro;
+	font-family: 'Thasadith', sans-serif;
+	font-weight:400;
+	margin:0;
+	padding:0;
+	font-size: 1.5rem;
+	text-align: center;
+	width:100%;
+
+	background:linear-gradient(175deg, #29c6e7, #587a01);
+	backgr
+
+}
+
+@media(max-width:767px){
+	body{background:-}
+	.navbar-form {
+    margin:0;
+	border:none;
+    color: black;
+	padding:0;
+	/*padding-top:10px;
+	padding-bottom:10px;*/
+  }
+  .navbar-collapse{
+	text-align: -webkit-center;
+  }
+  .pull-right{
+	float:none !important;
+	overflow:hidden;
+  }
+ 
+   .collapsing {
+       transition: all 0.2s
+   }
+   
+   .li-desc{
+		display:block;
+		font-size:0.5em;
+   }
+   
+   .sidenav{
+		top:unset !important;
+		
+		overflow:hidden;
+		bottom:0;
+		width:100% !important;
+		height:auto!important;
+		padding-top: 0px !important;
+		max-height:50px;
+   }
+   
+   .li-icon{
+		line-height:1 !important;
+   }
+   
+   li{
+		display: flex;
+		/* justify-content: space-between; */
+		flex-flow: column-reverse;
+		text-align: center !important;
+		padding:10px !important;
+		height:50px;
+		width:50px;
+		
+   }
+   
+   li:hover{
+		box-shadow: inset 0 0.5em 0 -0.35em gainsboro !important;
+   }
+   
+   
+	
+	ul{
+		display:inline-flex;
+	}
+}
+@media(min-width:768px){
+	body{background:-}
+	.navbar-form .form-control {
+		vertical-align: unset;
+	}
+	
+}
+@media(min-width:992px){
+	body{background:-}
+	
+   
+	
+}
+@media(min-width:1200px){
+	body{background:-}
+}
+
+.box {
+    width: 200px;
+    height: 200px;
+    background: white;
+    display: inline-block;
+    margin: 10px;
+	color:#201f2b;
+	border:1px solid #e7e7e7;
+	line-height: 200px;
+	font-size:32px;
+	transition-duration: 2s;
+	border-radius:4px;
+}
+
+.box:hover{
+	cursor:pointer;
+}
+
+.box:active{
+	top:0.1em;
+}
+
+
+*{
+	box-sizing:border-box;
+}
+
+.glyphicon{
+	color:gainsboro;
+}
+/*
+.glyphicon-plus{
+   -webkit-text-stroke: 1px gainsboro; 
+  
+	}
+	*/
+	/*
+.glyphicon-search{
+	color:#333;
+	background: gainsboro;
+    padding: 12px;
+    
+	cursor:pointer;
+	border:1px solid gainsboro;	
+	margin:10;
+}
+*/
+.round:hover,.glyphicon-search:hover,#searchbox:hover{
+	cursor:pointer;
+}
+
+input{
+	margin: 0 auto;
+
+}
+
+.navbar-default{
+	border:0;
+	border-radius:0;
+	position:fixed;
+	width:100%;
+	z-index:99
+}
+.main-content{
+	padding-right: 15px;
+    padding-left: 15px;
+    margin-right: 0;
+    margin-left: auto;
+}
+.search-bar{
+	float: left;
+    padding: 15px 15px;
+    font-size: 18px;
+    line-height: 12px;
+}
+
+.creation-form{
+	background:white;
+	border:1px solid #e7e7e7;
+	margin-top:20px;
+	padding:20px;
+}
+
+footer{
+	margin-top:61px;
+	padding:10px;
+	color:white;
+}
+.navbar-nav{
+	margin:0;
+}
+/*
+.round{
+	display:inline-block;
+	padding:12px;
+	background:gainsboro;
+	border: 1px solid gainsboro;
+	margin: 10;
+    margin-right: 10;
+	
+}
+*/
+form{
+	display:inline-block;
+}
+
+
+#searchbox{
+    font-size: inherit;
+	height:auto;
+	border:1px solid #e7e7e7;
+}
+
+.pull-right{
+	
+}
+.navbar-form{
+	padding-left:0;
+	padding-right:0;
+}
+
+#logo{
+	padding-right:10px;
+}
+
+.collapsed-padding{
+	padding-top:112px;
+}
+.glyphicon{
+	position:inherit;
+}
+.navbar-brand{
+	padding:18px;
+}
+
+.navbar{
+	background:#201f2b;
+	/*max-height:50px; */
+	
+	 
+}
+
+.card-1 {
+  box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+  transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+}
+
+.card-1:hover {
+  box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+}
+
+.navbar-collapse{
+border:0}
+
+a.button6{
+	 display:inline-block;
+	 padding:5px;
+	 margin:10 5 10 0;
+	 border-radius:0.15em;
+	 box-sizing: border-box;
+	 text-decoration:none;
+	 font-family:'Roboto',sans-serif;
+	 text-transform:uppercase;
+	 font-weight:400;
+	 color:#FFFFFF;
+	 background: #36383f;
+	 box-shadow:inset 0 -0.6em 0 -0.35em rgba(0,0,0,0.17);
+	 text-align:center;
+	 /*position:relative; */
+	 
+}
+a.button6:active{
+	top:0.1em;
+}
+@media all and (max-width:30em){
+ a.button6{
+	 display:inline-block;
+	 margin:0.4em auto;
+ }
+}
+
+.button6:hover{
+	cursor:pointer;
+	box-shadow: inset 0 -0.6em 0 -0.35em gainsboro;
+}
+
+.add-btn{
+	border:3px solid #ffeb3b;
+	
+}
+.search-btn{
+	border:3px solid #4caf50;
+}
+.question-btn{
+	border:3px solid #03a9f4;
+}
+
+.user-btn{
+	border:3px solid #9E9E9E;;
+}
+
+.shadow{
+	 box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+  transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+}
+
+.navbar-brand{
+	font-weight:bolder;
+    color: #dcdcdc !important;
+}
+
+.sidenav {
+  height: 100%; /* Full-height: remove this if you want "auto" height */
+  width: 160px; /* Set the width of the sidebar */
+  position: fixed; /* Fixed Sidebar (stay in place on scroll) */
+  z-index: 98; /* Stay on top */
+  top: 0; /* Stay at the top */
+  left: 0;
+  background-color: #111; /* Black */
+  overflow-x: hidden; /* Disable horizontal scroll */
+  
+  
+}
+
+/* The navigation menu links */
+.sidenav a {
+  padding: 10px;
+  text-decoration: none;
+  font-size: 20px;
+  color: #818181;
+  display: block;
+}
+
+/* When you mouse over the navigation links, change their color */
+.sidenav a:hover {
+  color: #f1f1f1;
+}
+
+/* Style page content */
+.main {
+  margin-left: 160px; /* Same as the width of the sidebar */
+  padding: 0px 10px;
+}
+
+/* On smaller screens, where height is less than 450px, change the style of the sidebar (less padding and a smaller font size) */
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 0px;}
+  .sidenav a {font-size: 18px;}
+  
+}
+
+.sidenav ul li {
+	
+	text-align:left;
+	padding:15px;
+	color:#dcdcdc;
+}
+
+.sidenav ul li:hover{
+	box-shadow:inset 0.3em 0 rgb(220, 220, 220);
+	cursor:pointer;
+	background:#36383f;
+}
+
+ul{
+	list-style-type:none;
+	padding:0;
+}
+.li-icon{
+	line-height: 1.35;
+	float:right
+}
+
+.dashboard{
+	background:white;
+	width:100%;
+	padding:10px;
+	
+}
+
+</style>
+
+<body>
+
+<nav class="navbar navbar-default shadow" role="navigation">
+
+	<div class="navbar-header">
+		<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+			<span class="sr-only">Toggle navigation</span>
+			<span class="icon-bar"></span>
+			<span class="icon-bar"></span>
+			<span class="icon-bar"></span>
+		</button>
+		<a class="navbar-brand">Calendar</a>
+	</div>
+	<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+		<div class="pull-right">
+			<a class="button6 question-btn"><span class="glyphicon glyphicon-question-sign" id="question"></span></a>
+			<a class="button6 user-btn"><span class="glyphicon glyphicon-user" id="question"></span></a>
+			
+	</div>
+</nav>	
+<!--SideNav -->
+<div class="sidenav">
+  <ul>
+	<li><span class="li-desc">Calendar</span><span class="glyphicon glyphicon-calendar li-icon"></span></li>
+	<li><span class="li-desc">Scenarios</span> <span class="glyphicon glyphicon-blackboard li-icon"></span></li>
+	<li><span class="li-desc">Templates</span> <span class="glyphicon glyphicon-folder-open li-icon"></span></li>
+  </ul>
+</div>
+
+
+	<!-- Modal -->
+	<div id="myModal" class="modal fade" role="dialog">
+	  <div class="modal-dialog">
+
+		<!-- Modal content-->
+		<div class="modal-content">
+		  <div class="modal-header">
+			<button type="button" class="close" data-dismiss="modal">&times;</button>
+			<h4 class="modal-title">Add new</h4>
+		  </div>
+		  <div class="modal-body">
+			<p>Some text in the modal.</p>
+		  </div>
+		  <div class="modal-footer">
+			<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+			<button type="button" class="btn btn-default" id="modal-add">Add</button>
+		  </div>
+		</div>
+
+	  </div>
+	</div>
+
+	<!-- Main content -->
+	<div class="main-content">
+		
+			<div class="col-sm-12 dashboard shadow">
+				<div class="col-sm-3">
+				
+				</div>
+				<div class="col-sm-9">
+					<div id='calendar'></div>
+				</div>
+			</div>
+		<div class=""></div>
+	</div>
+	
+<!--	<footer class="footer">
+	  <div class="container">
+		<p>Copyrights Facebook Manager 2019</p>
+		<p>marcin-jarzabek.pl</p>
+	  </div>
+	</footer> -->
+</body>
+
+
+
+<script type="text/javascript">
+
+$(window).resize(function() {
+  var navWidth = $(".sidenav").width();
+  var navHeight = $(".navbar").height();
+// $(".main-content").css("margin-left",navWidth);
+	$(".main-content").css("padding-top",navHeight + 20);
+	$(".sidenav").css("padding-top",navHeight);
+});
+
+$(document).ready(function(){
+	var navWidth = $(".sidenav").width();
+	var navHeight = $(".navbar").height();
+//	$(".main-content").css("margin-left",navWidth + 20); 
+	$(".main-content").css("padding-top",navHeight + 20)
+	$(".sidenav").css("padding-top",navHeight);
+});
+
+
+
+$(function() {
+
+  $('#calendar').fullCalendar({
+    themeSystem: 'bootstrap3',
+    header: {
+      left: 'prev,next today',
+      center: 'title',
+      right: 'month,agendaWeek,agendaDay,listMonth'
+    },
+    weekNumbers: true,
+    eventLimit: true, // allow "more" link when too many events
+    events: 'https://fullcalendar.io/demo-events.json'
+  });
+
+});
+
+</script>
+</html>
