@@ -39,7 +39,7 @@ body{
 	width:100%;
 
 	background:linear-gradient(175deg, #29c6e7, #587a01);
-	backgr
+	
 
 }
 
@@ -79,6 +79,7 @@ body{
 		height:auto!important;
 		padding-top: 0px !important;
 		max-height:50px;
+		
    }
    
    .li-icon{
@@ -104,6 +105,10 @@ body{
 	
 	ul{
 		display:inline-flex;
+	}
+	
+	.main-content{
+		margin-left:0px !important;
 	}
 }
 @media(min-width:768px){
@@ -486,7 +491,7 @@ ul{
 $(window).resize(function() {
   var navWidth = $(".sidenav").width();
   var navHeight = $(".navbar").height();
-// $(".main-content").css("margin-left",navWidth);
+	$(".main-content").css("margin-left",navWidth);
 	$(".main-content").css("padding-top",navHeight + 20);
 	$(".sidenav").css("padding-top",navHeight);
 });
@@ -494,7 +499,7 @@ $(window).resize(function() {
 $(document).ready(function(){
 	var navWidth = $(".sidenav").width();
 	var navHeight = $(".navbar").height();
-//	$(".main-content").css("margin-left",navWidth + 20); 
+	$(".main-content").css("margin-left",navWidth + 20); 
 	$(".main-content").css("padding-top",navHeight + 20)
 	$(".sidenav").css("padding-top",navHeight);
 });
