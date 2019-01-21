@@ -1,0 +1,33 @@
+#search-bar {
+  background-color: white;
+  color: white;
+  font-size: 14px;
+  width: 100%;
+  height: 30px;
+  border: 1px solid rgba(0,0,0,0.14);
+  margin-left:40px;
+  margin-right:40px;
+}
+
+#search-bar:focus {
+  background-color: white;
+  color: #474143;
+}
+
+#search-bar::-webkit-input-placeholder {
+  color: white !important;
+}
+
+#search-bar:-moz-placeholder {
+  /* Firefox 18- */
+  color: white !important;
+}
+
+#search-bar::-moz-placeholder {
+  /* Firefox 19+ */
+  color: white !important;
+}
+
+#search-bar:-ms-input-placeholder {
+  color: white !important;
+}
