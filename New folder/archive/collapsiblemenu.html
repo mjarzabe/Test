@@ -8,48 +8,53 @@
 <link rel="stylesheet" type="text/css" href="D:\Users\mjarzabe\Desktop\New folder\css\searchbar.css">
 <link rel="stylesheet" type="text/css" href="D:\Users\mjarzabe\Desktop\New folder\css\navbar.css">
 <link rel="stylesheet" href="D:\Users\mjarzabe\Desktop\New folder\css\wickedcss.min.css">
-<link rel="stylesheet" type="text/css" href="./slick/slick.css">
-<link rel="stylesheet" type="text/css" href="./slick/slick-theme.css">
-<link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-
 <link href="https://fonts.googleapis.com/css?family=Varela+Round" rel="stylesheet">
-<script src="https://code.jquery.com/jquery-3.1.0.js"></script>	
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>	
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
-<script src="./slick/slick.js" type="text/javascript" charset="utf-8"></script>
 <style>
 
 body, html{
-	background:orange;
-	color:#343a40!;
+	background:ghostwhite;
+	color:black;	
 	font-family: 'Varela Round', sans-serif;
 	height:100%;
-	overflow-x:hidden;
-	
 }
 
 .shadow{
 	box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
 }
 #header-container {
-	position:fixed;
-	width:100%;
-	background-color:transparent;
-	z-index:999999;
+  position:fixed;
+  width:100%;
+  background-color:transparent;
 }    
 #navbar, #submenu {
-	width:100%;
+  width:100%;
 }
 
 #navbar{
 	color:white; 
 }
 
+::placeholder {
+  color: #8bc9a8;
+  opacity: 1; /* Firefox */
+}
+
+:-ms-input-placeholder { /* Internet Explorer 10-11 */
+ color: #8bc9a8;
+}
+
+::-ms-input-placeholder { /* Microsoft Edge */
+ color: #8bc9a8;
+}
+
+
 .navbar{
-	background: #a1e8c2;
+	   background: #a1e8c2;
     border-bottom: 1px solid rgba(0,0,0,0.14);
 	color:white;
-	z-index:999;
 }
 
 #submenu-container{
@@ -57,6 +62,7 @@ body, html{
 	border-bottom: 1px solid rgba(0,0,0,0.14);
 	height:400px;
 	width:100%;
+	
 	padding: 10px;
 	max-height:80%;
 	display:none;
@@ -83,19 +89,14 @@ hr {
 	text-align:center;
  }
  
- .foo{
-		filter: brightness(85%);
-	}
-	
-	
-	.slick{
-		background:orange;
-	}
+ .contents{
+	padding-top:190px;
+ }
+ 
  .box{
-	padding:60px;
+	padding:20px;
 	text-align:justify;
-	background:white;
-	border-radius:20px;
+	background:white
  }
  
  .navbar-toggler{
@@ -106,166 +107,13 @@ hr {
   .navbar-toggler-icon{
 	background:#a1e8c1;
 }
-
 #slider-container{
 	width:100%;
 	height:100%;
 	background:teal;
 }
 
-.carousel-container{
-	width: 100vw;
-    /*min-height: 100vh;
-	height:100%; */
-	height:100vh;
-    max-width:100%;  
-	z-index:0;
-	background:ghostwhite;
-	text-align:center;		
-	position:relative;
 	
-}
-
-.carousel-inner img {
-  margin: auto;
-}
-
-
-.background-cover {
-	background-position: center center;
-	background-repeat: no-repeat;
-	background-size: cover;
-	background-image: url(http://placehold.it/1440x750&text=1);
-}
-
-.slide {
-    height: 100%;
-	min-width:130px;
-	max-height:100%;
-    border-radius: 20px;
-    background: white;
-    margin-bottom:10px;
-	margin-top:10px;
-	transition: 0.5s all;
-}
-
-.slide:hover{
-	cursor:pointer;
-	transform: translate(0px,-10px)
-}
-
-.downSection:hover{
-	cursor:pointer;
-	transform: translate(0px,-3px)
-}
-.img-circle {
-    border-radius: 50%;
-}
-
-.floating {  
-    animation-name: floating;
-    animation-duration: 3s;
-    animation-iteration-count: infinite;
-    animation-timing-function: ease-in-out;
-    margin-left: 30px;
-    margin-top: 5px;
-}
-
-@keyframes floating {
-    from { transform: translate(0,  0px); }
-    65%  { transform: translate(0, 15px); }
-    to   { transform: translate(0, -0px); }    
-}
-.slick-slide {margin: 20px}
-
-.downSection{
-	position:absolute;
-	bottom:5%;
-	padding:10px;
-	width:50px;
-	border-radius:100%;	
-	background:white;
-	border: 1px solid rgba(0,0,0,0.14);
-	right:0;
-    left:0;
-	transition: 0.5s all;
-	margin: 0 auto;
-}
-
-.logo{
-	margin:auto;
-	padding:10px;
-	
-}
-.overlay{
-	padding:10px;
-}
-
-.slick-prev:before{
-  
-  color: #a1e8c2;
-  font-size: 40px;
-
-}
-
-.slick-next:before {
-
-  color: #a1e8c2;
-  font-size: 40px;
-}
-
-.slick-next{
-	
-    right: -20px;
-
-}
-
-.slick-prev{
-	left: -40px !important;
-}
-
-.slick-next,.slick-prev{
-	top:auto;
-}
-
-.desc{
-	padding:10%;
-	font-size:12px;
-	text-align:justify;
-}
-.brand{
-	font-weight:bolder;
-}
-.details{
-	display:none;
-}
-
-.slick-list{
-	position:relative;
-}
-
-footer{
-	margin-top:50px;
-	background:#a1e8c2;
-	border-top: 1px solid rgba(0,0,0,0.14);
-	padding-top: 0.5rem;
-    padding-right: 1rem;
-    padding-bottom: 0.5rem;
-    padding-left: 1rem;
-}
-
-.footer-content{
-	height:300px;
-	background: #8bc9a8;
-}
-
-.fixed-header {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%; 
-}
-
 </style>
 </head>
 
@@ -276,7 +124,7 @@ footer{
 			<nav class="navbar  fixed-top navbar-expand-md ">
 				<div class="container">
 				  <a class="navbar-brand" >
-					 Command Center
+				   Website Brand
 				  </a>
 				  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar">
 					<span class="navbar-toggler-icon"></span>
@@ -313,112 +161,34 @@ footer{
 	
 	<!--Site contents-->
 	
-	<div class="contents container ">
-		<div class="carousel-container ">
-			<section class="slick h-100 d-flex justify-content-center flex-column " style="padding-top:95px">
-			</section>
-			
-			<button type="button" class="btn btn-default btn-lg  downSection shadow">
-			  <i class="fa fa-chevron-down" aria-hidden="true"></i>
-			</button>
-		</div>
-			
-	
-	
-		<div class=" shadow box">
-			Suspendisse et mattis arcu, nec rutrum nibh. Donec laoreet lacus dolor, sit amet lacinia magna luctus sit amet. Proin nulla nunc, sollicitudin sit amet ante at, tincidunt sollicitudin quam. Vivamus volutpat ipsum non purus vehicula pellentesque. Fusce quis ex sollicitudin, mattis libero vitae, vestibulum sapien. Proin non varius sem, sed aliquam enim. Nunc in pulvinar ipsum. Aenean tempor, nulla luctus hendrerit gravida, augue sapien rhoncus purus, sit amet sodales ex libero eu odio. Vivamus quis risus sollicitudin, porttitor massa in, blandit enim. Quisque laoreet, metus eu suscipit vestibulum, nulla sem euismod ligula, in accumsan arcu diam vel nunc. Morbi id gravida sapien. Aenean euismod erat enim, ac dictum magna auctor in. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Suspendisse potenti.
-			Suspendisse et mattis arcu, nec rutrum nibh. Donec laoreet lacus dolor, sit amet lacinia magna luctus sit amet. Proin nulla nunc, sollicitudin sit amet ante at, tincidunt sollicitudin quam. Vivamus volutpat ipsum non purus vehicula pellentesque. Fusce quis ex sollicitudin, mattis libero vitae, vestibulum sapien. Proin non varius sem, sed aliquam enim. Nunc in pulvinar ipsum. Aenean tempor, nulla luctus hendrerit gravida, augue sapien rhoncus purus, sit amet sodales ex libero eu odio. Vivamus quis risus sollicitudin, porttitor massa in, blandit enim. Quisque laoreet, metus eu suscipit vestibulum, nulla sem euismod ligula, in accumsan arcu diam vel nunc. Morbi id gravida sapien. Aenean euismod erat enim, ac dictum magna auctor in. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Suspendisse potenti.
-			Suspendisse et mattis arcu, nec rutrum nibh. Donec laoreet lacus dolor, sit amet lacinia magna luctus sit amet. Proin nulla nunc, sollicitudin sit amet ante at, tincidunt sollicitudin quam. Vivamus volutpat ipsum non purus vehicula pellentesque. Fusce quis ex sollicitudin, mattis libero vitae, vestibulum sapien. Proin non varius sem, sed aliquam enim. Nunc in pulvinar ipsum. Aenean tempor, nulla luctus hendrerit gravida, augue sapien rhoncus purus, sit amet sodales ex libero eu odio. Vivamus quis risus sollicitudin, porttitor massa in, blandit enim. Quisque laoreet, metus eu suscipit vestibulum, nulla sem euismod ligula, in accumsan arcu diam vel nunc. Morbi id gravida sapien. Aenean euismod erat enim, ac dictum magna auctor in. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Suspendisse potenti.
-			Suspendisse et mattis arcu, nec rutrum nibh. Donec laoreet lacus dolor, sit amet lacinia magna luctus sit amet. Proin nulla nunc, sollicitudin sit amet ante at, tincidunt sollicitudin quam. Vivamus volutpat ipsum non purus vehicula pellentesque. Fusce quis ex sollicitudin, mattis libero vitae, vestibulum sapien. Proin non varius sem, sed aliquam enim. Nunc in pulvinar ipsum. Aenean tempor, nulla luctus hendrerit gravida, augue sapien rhoncus purus, sit amet sodales ex libero eu odio. Vivamus quis risus sollicitudin, porttitor massa in, blandit enim. Quisque laoreet, metus eu suscipit vestibulum, nulla sem euismod ligula, in accumsan arcu diam vel nunc. Morbi id gravida sapien. Aenean euismod erat enim, ac dictum magna auctor in. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Suspendisse potenti.
-			Suspendisse et mattis arcu, nec rutrum nibh. Donec laoreet lacus dolor, sit amet lacinia magna luctus sit amet. Proin nulla nunc, sollicitudin sit amet ante at, tincidunt sollicitudin quam. Vivamus volutpat ipsum non purus vehicula pellentesque. Fusce quis ex sollicitudin, mattis libero vitae, vestibulum sapien. Proin non varius sem, sed aliquam enim. Nunc in pulvinar ipsum. Aenean tempor, nulla luctus hendrerit gravida, augue sapien rhoncus purus, sit amet sodales ex libero eu odio. Vivamus quis risus sollicitudin, porttitor massa in, blandit enim. Quisque laoreet, metus eu suscipit vestibulum, nulla sem euismod ligula, in accumsan arcu diam vel nunc. Morbi id gravida sapien. Aenean euismod erat enim, ac dictum magna auctor in. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Suspendisse potenti.
-			Suspendisse et mattis arcu, nec rutrum nibh. Donec laoreet lacus dolor, sit amet lacinia magna luctus sit amet. Proin nulla nunc, sollicitudin sit amet ante at, tincidunt sollicitudin quam. Vivamus volutpat ipsum non purus vehicula pellentesque. Fusce quis ex sollicitudin, mattis libero vitae, vestibulum sapien. Proin non varius sem, sed aliquam enim. Nunc in pulvinar ipsum. Aenean tempor, nulla luctus hendrerit gravida, augue sapien rhoncus purus, sit amet sodales ex libero eu odio. Vivamus quis risus sollicitudin, porttitor massa in, blandit enim. Quisque laoreet, metus eu suscipit vestibulum, nulla sem euismod ligula, in accumsan arcu diam vel nunc. Morbi id gravida sapien. Aenean euismod erat enim, ac dictum magna auctor in. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Suspendisse potenti.
-			Suspendisse et mattis arcu, nec rutrum nibh. Donec laoreet lacus dolor, sit amet lacinia magna luctus sit amet. Proin nulla nunc, sollicitudin sit amet ante at, tincidunt sollicitudin quam. Vivamus volutpat ipsum non purus vehicula pellentesque. Fusce quis ex sollicitudin, mattis libero vitae, vestibulum sapien. Proin non varius sem, sed aliquam enim. Nunc in pulvinar ipsum. Aenean tempor, nulla luctus hendrerit gravida, augue sapien rhoncus purus, sit amet sodales ex libero eu odio. Vivamus quis risus sollicitudin, porttitor massa in, blandit enim. Quisque laoreet, metus eu suscipit vestibulum, nulla sem euismod ligula, in accumsan arcu diam vel nunc. Morbi id gravida sapien. Aenean euismod erat enim, ac dictum magna auctor in. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Suspendisse potenti.
-			Suspendisse et mattis arcu, nec rutrum nibh. Donec laoreet lacus dolor, sit amet lacinia magna luctus sit amet. Proin nulla nunc, sollicitudin sit amet ante at, tincidunt sollicitudin quam. Vivamus volutpat ipsum non purus vehicula pellentesque. Fusce quis ex sollicitudin, mattis libero vitae, vestibulum sapien. Proin non varius sem, sed aliquam enim. Nunc in pulvinar ipsum. Aenean tempor, nulla luctus hendrerit gravida, augue sapien rhoncus purus, sit amet sodales ex libero eu odio. Vivamus quis risus sollicitudin, porttitor massa in, blandit enim. Quisque laoreet, metus eu suscipit vestibulum, nulla sem euismod ligula, in accumsan arcu diam vel nunc. Morbi id gravida sapien. Aenean euismod erat enim, ac dictum magna auctor in. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Suspendisse potenti.
-		</div>
+	<div class="contents">
 		
+			
+	
+	`
+		<div class="container shadow box">
+			Suspendisse et mattis arcu, nec rutrum nibh. Donec laoreet lacus dolor, sit amet lacinia magna luctus sit amet. Proin nulla nunc, sollicitudin sit amet ante at, tincidunt sollicitudin quam. Vivamus volutpat ipsum non purus vehicula pellentesque. Fusce quis ex sollicitudin, mattis libero vitae, vestibulum sapien. Proin non varius sem, sed aliquam enim. Nunc in pulvinar ipsum. Aenean tempor, nulla luctus hendrerit gravida, augue sapien rhoncus purus, sit amet sodales ex libero eu odio. Vivamus quis risus sollicitudin, porttitor massa in, blandit enim. Quisque laoreet, metus eu suscipit vestibulum, nulla sem euismod ligula, in accumsan arcu diam vel nunc. Morbi id gravida sapien. Aenean euismod erat enim, ac dictum magna auctor in. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Suspendisse potenti.
+			Suspendisse et mattis arcu, nec rutrum nibh. Donec laoreet lacus dolor, sit amet lacinia magna luctus sit amet. Proin nulla nunc, sollicitudin sit amet ante at, tincidunt sollicitudin quam. Vivamus volutpat ipsum non purus vehicula pellentesque. Fusce quis ex sollicitudin, mattis libero vitae, vestibulum sapien. Proin non varius sem, sed aliquam enim. Nunc in pulvinar ipsum. Aenean tempor, nulla luctus hendrerit gravida, augue sapien rhoncus purus, sit amet sodales ex libero eu odio. Vivamus quis risus sollicitudin, porttitor massa in, blandit enim. Quisque laoreet, metus eu suscipit vestibulum, nulla sem euismod ligula, in accumsan arcu diam vel nunc. Morbi id gravida sapien. Aenean euismod erat enim, ac dictum magna auctor in. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Suspendisse potenti.
+			Suspendisse et mattis arcu, nec rutrum nibh. Donec laoreet lacus dolor, sit amet lacinia magna luctus sit amet. Proin nulla nunc, sollicitudin sit amet ante at, tincidunt sollicitudin quam. Vivamus volutpat ipsum non purus vehicula pellentesque. Fusce quis ex sollicitudin, mattis libero vitae, vestibulum sapien. Proin non varius sem, sed aliquam enim. Nunc in pulvinar ipsum. Aenean tempor, nulla luctus hendrerit gravida, augue sapien rhoncus purus, sit amet sodales ex libero eu odio. Vivamus quis risus sollicitudin, porttitor massa in, blandit enim. Quisque laoreet, metus eu suscipit vestibulum, nulla sem euismod ligula, in accumsan arcu diam vel nunc. Morbi id gravida sapien. Aenean euismod erat enim, ac dictum magna auctor in. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Suspendisse potenti.
+			Suspendisse et mattis arcu, nec rutrum nibh. Donec laoreet lacus dolor, sit amet lacinia magna luctus sit amet. Proin nulla nunc, sollicitudin sit amet ante at, tincidunt sollicitudin quam. Vivamus volutpat ipsum non purus vehicula pellentesque. Fusce quis ex sollicitudin, mattis libero vitae, vestibulum sapien. Proin non varius sem, sed aliquam enim. Nunc in pulvinar ipsum. Aenean tempor, nulla luctus hendrerit gravida, augue sapien rhoncus purus, sit amet sodales ex libero eu odio. Vivamus quis risus sollicitudin, porttitor massa in, blandit enim. Quisque laoreet, metus eu suscipit vestibulum, nulla sem euismod ligula, in accumsan arcu diam vel nunc. Morbi id gravida sapien. Aenean euismod erat enim, ac dictum magna auctor in. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Suspendisse potenti.
+			Suspendisse et mattis arcu, nec rutrum nibh. Donec laoreet lacus dolor, sit amet lacinia magna luctus sit amet. Proin nulla nunc, sollicitudin sit amet ante at, tincidunt sollicitudin quam. Vivamus volutpat ipsum non purus vehicula pellentesque. Fusce quis ex sollicitudin, mattis libero vitae, vestibulum sapien. Proin non varius sem, sed aliquam enim. Nunc in pulvinar ipsum. Aenean tempor, nulla luctus hendrerit gravida, augue sapien rhoncus purus, sit amet sodales ex libero eu odio. Vivamus quis risus sollicitudin, porttitor massa in, blandit enim. Quisque laoreet, metus eu suscipit vestibulum, nulla sem euismod ligula, in accumsan arcu diam vel nunc. Morbi id gravida sapien. Aenean euismod erat enim, ac dictum magna auctor in. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Suspendisse potenti.
+			Suspendisse et mattis arcu, nec rutrum nibh. Donec laoreet lacus dolor, sit amet lacinia magna luctus sit amet. Proin nulla nunc, sollicitudin sit amet ante at, tincidunt sollicitudin quam. Vivamus volutpat ipsum non purus vehicula pellentesque. Fusce quis ex sollicitudin, mattis libero vitae, vestibulum sapien. Proin non varius sem, sed aliquam enim. Nunc in pulvinar ipsum. Aenean tempor, nulla luctus hendrerit gravida, augue sapien rhoncus purus, sit amet sodales ex libero eu odio. Vivamus quis risus sollicitudin, porttitor massa in, blandit enim. Quisque laoreet, metus eu suscipit vestibulum, nulla sem euismod ligula, in accumsan arcu diam vel nunc. Morbi id gravida sapien. Aenean euismod erat enim, ac dictum magna auctor in. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Suspendisse potenti.
+			Suspendisse et mattis arcu, nec rutrum nibh. Donec laoreet lacus dolor, sit amet lacinia magna luctus sit amet. Proin nulla nunc, sollicitudin sit amet ante at, tincidunt sollicitudin quam. Vivamus volutpat ipsum non purus vehicula pellentesque. Fusce quis ex sollicitudin, mattis libero vitae, vestibulum sapien. Proin non varius sem, sed aliquam enim. Nunc in pulvinar ipsum. Aenean tempor, nulla luctus hendrerit gravida, augue sapien rhoncus purus, sit amet sodales ex libero eu odio. Vivamus quis risus sollicitudin, porttitor massa in, blandit enim. Quisque laoreet, metus eu suscipit vestibulum, nulla sem euismod ligula, in accumsan arcu diam vel nunc. Morbi id gravida sapien. Aenean euismod erat enim, ac dictum magna auctor in. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Suspendisse potenti.
+			Suspendisse et mattis arcu, nec rutrum nibh. Donec laoreet lacus dolor, sit amet lacinia magna luctus sit amet. Proin nulla nunc, sollicitudin sit amet ante at, tincidunt sollicitudin quam. Vivamus volutpat ipsum non purus vehicula pellentesque. Fusce quis ex sollicitudin, mattis libero vitae, vestibulum sapien. Proin non varius sem, sed aliquam enim. Nunc in pulvinar ipsum. Aenean tempor, nulla luctus hendrerit gravida, augue sapien rhoncus purus, sit amet sodales ex libero eu odio. Vivamus quis risus sollicitudin, porttitor massa in, blandit enim. Quisque laoreet, metus eu suscipit vestibulum, nulla sem euismod ligula, in accumsan arcu diam vel nunc. Morbi id gravida sapien. Aenean euismod erat enim, ac dictum magna auctor in. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Suspendisse potenti.
+		</div>
 			
 	</div>
-	<footer class="footer text-center">
-     
 	
-			<span class="text-muted">Place sticky footer content here.</span>
-		
-      
+    <footer class="footer">
+      <div class="container">
+        <span class="text-muted">Place sticky footer content here.</span>
+      </div>
     </footer>
-    
 </body>
 
 <script type="text/javascript">
 
-
-var navHeight
-
-		
-
- //var slickArray = ["#f65314","#7cbb00","#00a1f1","#ffbb00","#f65314","#7cbb00","#00a1f1","#ffbb00","#f65314","#7cbb00","#00a1f1","#ffbb00","#f65314","#7cbb00","#00a1f1","#ffbb00","#737373","#f65314","#7cbb00","#00a1f1","#ffbb00","#737373"];
-    
-	$(document).ready(function() {
-		 navHeight = $("nav").height();
-		$(".slick ").css("padding-top",navHeight);
-	
-      for (i=0;i<20;i++){
-	  
-		
-		var divInner = "<div class='slide shadow' style='background-color:white'>"
-			divInner += "<div class='overlay'><img class='img-fluid logo'  style='width:30% !important'  src='img/dron4u.png'/><span class='brand'>DroneWorld</span><div class='desc'>Fotografia i filmy z powietrza, dlaczego? Bo z góry widać więcej:) Szanowni Państwo, uprzejmie proszę o nie kopiowanie treści z tej strony a o udostępnianie postów, w celu wykorzystania zdjęć poza fb proszę o kontakt</div>"
-			divInner += "<div class='details'><li>WEBSITE</li><li>PHONE</li><li>EMAIL</li><div></div></div>"
-			
-        $(".slick").append(divInner);
-		
-      }
-	  
-		$(".slick").slick({
-		slidesToShow: 4, // default desktop values
-		slidesToScroll: 4,
-		rows: 2,
-		dots: false,
-		arrows: true,
-		responsive: [
-			{
-				breakpoint: 980, // tablet breakpoint
-				settings: {
-					slidesToShow: 3,
-					slidesToScroll: 3
-				}
-			},
-			{
-				breakpoint: 480, // mobile breakpoint
-				settings: {
-					slidesToShow: 1,
-					slidesToScroll: 1
-				}
-			}
-		]
-	});
-	
-	
-	$(".slide").hover(function() {
-		
-	  $(this).children('.details').fadeIn();
-	  $('.slide').not(this).addClass('foo');
-	  $(this).find('.user-name').animate({
-		  height: '+=10px'
-	  }, 300);
-	},
-	function() {
-	   $(this).children('.details').fadeOut();
-	   $('.slide').not(this).removeClass('foo');
-	   $(this).find('.user-name').animate({
-		  height: '-=10px'
-	  }, 300);
-	});
-
-});		
-	
-	
-
-
-$(".one,.two,.three").mouseenter(function() {              
+$("#header-container").mouseenter(function() {              
 	//$("hr").show();  
 	$("#submenu-container").show();
 }).mouseleave(function () {     
@@ -440,32 +210,7 @@ $(".one,.two,.three").mouseenter(function() {
 	$("hr").css("margin-left","66%");
 	//$(".contents").text("three")
  });
- 
- 
- 
-$(window).resize(function() {
-  
-  var navHeight = $("nav").height();
-	$(".slick ").css("padding-top",navHeight);
-	
-});
 
-$(window).scroll(function(){
-	console.log("1")
-    if ($(window).scrollTop() >= 1000) {
-        $('.downSection').addClass('fixed-header');
-       
-    }
-    else {
-        $('.downSection').removeClass('fixed-header');
-        
-    }
-});
-
-
- 
-
-		  
 </script>
 
 </body>
